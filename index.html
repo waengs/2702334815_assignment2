@@ -1,0 +1,49 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homepage - Masi Idup</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <span class="menu-toggle" onclick="toggleMenu()">&#9776;</span>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="cindy.html">Cindy</a>
+        <a href="mandy.html">Mandy</a>
+        <a href="juli.html">Juli</a>
+        <a href="darren.html">Darren</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="homepage-container">
+    <h1>Welcome to Masi Idup</h1>      
+    <p>We are a passionate group dedicated to creating innovative solutions through technology and teamwork. Our mission is to deliver user-friendly and efficient systems that solve real-world problems, while continuously learning and growing together.</p>
+    <h2>Final Project: Cihen Kitchen Ticketing System</h2>
+    <p>Our final project is a comprehensive ticketing system developed in collaboration with Cihen Kitchen to manage orders and gather customer feedback efficiently. This system aims to streamline operations and enhance the customer experience through seamless technology integration.</p>
+  <!-- Slideshow Container -->
+    <div class="slideshow-container">
+      <div class="slide">
+        <img src="group.jpeg" alt="Slide 1" />
+      </div>
+      <div class="slide">
+        <img src="group2.jpg" alt="Slide 2" />
+      </div>
+      <div class="slide">
+        <img src="group3.jpg" alt="Slide 3" />
+      </div>
+
+      <!-- Navigation arrows -->
+      <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+      <button class="next" onclick="plusSlides(1)">&#10095;</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

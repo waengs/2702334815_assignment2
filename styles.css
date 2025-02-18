@@ -1,0 +1,246 @@
+/* Reset some default styles for better control */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navigation bar styles */
+nav {
+  background-color: #333;
+  padding: 1em;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: transform 0.3s;
+}
+
+nav a:hover {
+  transform: scale(1.1);
+}
+
+/* Profile container styles */
+.profile-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 50px auto;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-image {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+.profile-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.profile-info p {
+  margin: 5px 0;
+}
+
+.section-title {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Navigation bar styles for homepage */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-toggle {
+  font-size: 2em;
+  color: white;
+  display: none;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5em;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #3498db;
+  transform: scale(1.1);
+}
+
+/* Responsive menu for smaller screens */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #333;
+    width: 50%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+
+  .nav-links.active {
+    transform: translateX(0);
+  }
+}
+
+/* Homepage container styles */
+.homepage-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 2em;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.homepage-container h1 {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  max-width: 1000px;  /* You can adjust the max-width as needed */
+  margin: auto;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Next and Previous buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.homepage-container p {
+  font-size: 1.2em;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.homepage-container h2 {
+  font-size: 2em;
+  margin: 30px 0;
+  text-align: center;
+  color: #3498db;
+}
+
+.homepage-container p strong {
+  font-weight: bold;
+}
+
+/* Hover effect for sections */
+.section-title {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: #3498db;
+  transition: color 0.3s ease;
+}
+
+.section-title:hover {
+  color: #2c3e50;
+}
+
+/* Style for the star rating system */
+.rating {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.star {
+  font-size: 1.5em;
+  color: #ccc;  /* Light gray by default */
+}
+
+.star.selected,
+.star:hover {
+  color: #f39c12;  /* Gold when selected or hovered */
+}
+
+/* Change color of stars on hover */
+.rating .star:hover,
+.rating .star.selected:hover {
+  color: #b98c43;
+}
